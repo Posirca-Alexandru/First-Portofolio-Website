@@ -1,0 +1,7 @@
+@use '../abstracts' as *;
+
+.container{
+    @include flex-c-c;
+    width: 100%;
+    min-height: 100vh;
+}

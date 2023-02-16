@@ -1,5 +1,213 @@
-.first-test {
-  background-color: bisque;
+:root {
+  --background-color: rgb(254, 254, 224);
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b,
+u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot,
+thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: black;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 10px;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--background-color);
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#hero {
+  z-index: 1;
+  background-image: url("/assets/img/background-hero.jpg");
+  background-position: top center;
+  background-size: cover;
+}
+#hero h1 {
+  display: block;
+  position: relative;
+  width: fit-content;
+  color: transparent;
+  font-size: 4rem;
+  animation: text-reveal 0.5s ease forwards;
+  animation-delay: 1s;
+}
+#hero h1:nth-child(1) {
+  animation-delay: 1s;
+}
+#hero h1:nth-child(1) span {
+  animation-delay: 0.5s;
+}
+#hero h1:nth-child(2) {
+  animation-delay: 2s;
+}
+#hero h1:nth-child(2) span {
+  animation-delay: 1.5s;
+}
+#hero h1:nth-child(3) {
+  animation: text-reveal-name 0.5s ease forwards;
+  animation-delay: 3s;
+}
+#hero h1:nth-child(3) span {
+  animation-delay: 2.5s;
+}
+#hero h1 span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: rgb(220, 20, 60);
+  animation: text-reveal-box 1s ease 1;
+  animation-delay: 0.5s;
+}
+#hero .cta {
+  display: inline-block;
+  transition: 0.3s ease;
+  margin-top: 30px;
+  border: 2px solid rgb(220, 20, 60);
+  background-color: transparent;
+  padding: 10px 30px;
+  color: rgb(252, 252, 252);
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 2rem;
+  transition-property: background-color, color;
+}
+#hero .cta:hover {
+  color: rgb(252, 252, 252);
+  background-color: rgb(220, 20, 60);
+}
+#hero:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  z-index: -1;
+  background-color: rgb(0, 0, 0);
+  content: "";
+}
+#hero .hero {
+  justify-content: flex-start;
+  margin: 0 auto;
+  padding: 0 50px;
+  max-width: 1200px;
+}
+
+@keyframes text-reveal-box {
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+@keyframes text-reveal {
+  100% {
+    color: rgb(252, 252, 252);
+  }
+}
+@keyframes text-reveal-name {
+  100% {
+    color: rgb(220, 20, 60);
+  }
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.flex {
+  display: flex;
+}
+.flex -jc-sb {
+  justify-content: space-between;
+}
+.flex -jc-c {
+  justify-content: center;
+}
+.flex -ai-c {
+  align-items: center;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
 }
 
 /*# sourceMappingURL=style.css.map */

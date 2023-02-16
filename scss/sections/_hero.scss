@@ -1,0 +1,104 @@
+@use "../abstracts" as *;
+
+#hero {
+  z-index: 1;
+  background-image: url("/assets/img/background-hero.jpg");
+  background-position: top center;
+  background-size: cover;
+
+  h1 {
+    display: block;
+    position: relative;
+    width: fit-content;
+    color: $transparent;
+    font-size: $font-lg;
+    @include animate(text-reveal, 0.5s, ease, forwards);
+    animation-delay: 1s;
+
+    &:nth-child(1) {
+      animation-delay: 1s;
+      span {
+        animation-delay: 0.5s;
+      }
+    }
+    &:nth-child(2) {
+      animation-delay: 2s;
+
+      span {
+        animation-delay: 1.5s;
+      }
+    }
+    &:nth-child(3) {
+      @include animate(text-reveal-name, 0.5s, ease, forwards);
+      animation-delay: 3s;
+      span {
+        animation-delay: 2.5s;
+      }
+    }
+
+    span {
+      @include absolute-0;
+      height: 100%;
+      width: 0;
+      background-color: $crimson;
+      @include animate(text-reveal-box, 1s, ease, 1);
+      animation-delay: 0.5s;
+    }
+  }
+  .cta {
+    display: inline-block;
+    transition: $transition-03;
+    margin-top: 30px;
+    border: 2px solid $crimson;
+    background-color: $transparent;
+    padding: 10px 30px;
+    color: $white;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: $font-med;
+    transition-property: background-color, color;
+
+    &:hover {
+      color: $white;
+      background-color: $crimson;
+    }
+  }
+  &:after {
+    @include absolute-0;
+    @include size-full;
+    opacity: 0.2;
+    z-index: -1;
+    background-color: $black;
+    content: "";
+  }
+  .hero {
+    justify-content: flex-start;
+    margin: $m-auto;
+    padding: 0 50px;
+    max-width: $w-container;
+  }
+}
+
+// KeyFrames
+@include keyframes(text-reveal-box) {
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+
+@include keyframes(text-reveal) {
+  100% {
+    color: $white;
+  }
+}
+
+@include keyframes(text-reveal-name) {
+  100% {
+    color: $crimson;
+  }
+}
