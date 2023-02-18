@@ -1,5 +1,9 @@
+h2 {
+  --fs-18: 1.8rem;
+}
+
 :root {
-  --background-color: rgb(254, 254, 224);
+  --background-color: rgb(240, 240, 240);
 }
 
 *, *:before, *:after {
@@ -59,6 +63,10 @@ h3 {
   line-height: 1.1;
 }
 
+h2 {
+  font-size: var(--fs-18);
+}
+
 a,
 a:visited,
 a:active {
@@ -80,6 +88,15 @@ img {
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+
+p {
+  margin-top: 5px;
+  line-height: 2rem;
+  color: rgb(0, 0, 0);
+  font-size: 1.4rem;
+  font-weight: 300;
+  letter-spacing: 0.05rem;
 }
 
 #hero {
@@ -134,8 +151,7 @@ img {
   background-color: transparent;
   padding: 10px 30px;
   color: rgb(252, 252, 252);
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.2rem;
   font-size: 2rem;
   transition-property: background-color, color;
 }
@@ -181,6 +197,69 @@ img {
     color: rgb(220, 20, 60);
   }
 }
+#services .services {
+  padding: 100px 0;
+  max-width: 1500px;
+}
+#services .section-title {
+  margin-bottom: 10px;
+  letter-spacing: 0.2rem;
+  color: rgb(0, 0, 0);
+  font-size: 4rem;
+  font-weight: 300;
+}
+#services .section-title span {
+  color: rgb(220, 20, 60);
+}
+#services .service-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+#services .service-bottom .icon {
+  margin-bottom: 20px;
+  width: 80px;
+  height: 80px;
+}
+#services .service-item {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  flex-basis: 80%;
+  align-items: flex-start;
+  z-index: 1;
+  margin: 10px 5%;
+  border-radius: 10px;
+  background-image: url("/assets/img/services.png");
+  background-size: cover;
+  padding: 30px;
+  overflow: hidden;
+  color: rgb(252, 252, 252);
+}
+#services .service-item::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  z-index: -1;
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  height: 100%;
+  content: "";
+}
+#services .service-item h2 {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: rgb(252, 252, 252);
+  font-size: 2rem;
+}
+#services .service-item p {
+  text-align: left;
+  color: rgb(252, 252, 252);
+}
+
 .container {
   display: flex;
   align-items: center;
@@ -192,22 +271,39 @@ img {
 .flex {
   display: flex;
 }
-.flex -jc-sb {
+.flex-jc-sb {
   justify-content: space-between;
 }
-.flex -jc-c {
+.flex-jc-c {
   justify-content: center;
 }
-.flex -ai-c {
+.flex-ai-c {
   align-items: center;
+}
+.flex-fd-c {
+  flex-direction: column;
+}
+.flex-fw-w {
+  flex-wrap: wrap;
 }
 
 .relative {
-  position: relative;
+  position: relativde;
 }
 
 .absolute {
   position: absolute;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.m-auto {
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=style.css.map */

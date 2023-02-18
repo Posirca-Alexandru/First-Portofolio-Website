@@ -1,21 +1,42 @@
 // flexbox
 .flex {
   display: flex;
-  & -jc-sb {
+  &-jc-sb {
     justify-content: space-between;
   }
-  & -jc-c {
+  &-jc-c {
     justify-content: center;
   }
-  & -ai-c {
+  &-ai-c {
     align-items: center;
+  }
+  &-fd-c {
+    flex-direction: column;
+  }
+  &-fw-w {
+    flex-wrap: wrap;
   }
 }
 
 //position
 .relative {
-  position: relative;
+  position: relativde;
 }
 .absolute {
   position: absolute;
+}
+
+//text
+.text {
+  &-center {
+    text-align: center;
+  }
+  &-uppercase {
+    text-transform: uppercase;
+  }
+}
+
+//margin
+.m-auto {
+  margin: 0 auto;
 }

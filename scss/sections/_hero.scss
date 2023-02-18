@@ -11,7 +11,7 @@
     position: relative;
     width: fit-content;
     color: $transparent;
-    font-size: $font-lg;
+    font-size: size(main, 800);
     @include animate(text-reveal, 0.5s, ease, forwards);
     animation-delay: 1s;
 
@@ -53,9 +53,8 @@
     background-color: $transparent;
     padding: 10px 30px;
     color: $white;
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
-    font-size: $font-med;
+    letter-spacing: size(main, 100);
+    font-size: size(main, 400);
     transition-property: background-color, color;
 
     &:hover {

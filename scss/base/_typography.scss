@@ -1,8 +1,14 @@
+@use '../abstracts' as *;
+
 h1,
 h2,
 h3 {
   font-weight: 700;
   line-height: 1.1;
+}
+
+h2 {
+  font-size: var(--fs-18);
 }
 
 a,

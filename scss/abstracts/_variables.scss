@@ -9,6 +9,7 @@ $m-auto: 0 auto;
 //Transition
 $transition-03: 0.3s ease;
 
-//Font Sizes
-$font-med: 2rem; //20px
-$font-lg: 4rem; //40px
+//Elements
+h2 {
+    --fs-18: 1.8rem;
+}
