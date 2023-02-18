@@ -1,9 +1,17 @@
-h2 {
-  --fs-18: 1.8rem;
+html {
+  --fs-10: 10px;
 }
 
 :root {
   --background-color: rgb(240, 240, 240);
+  --fs-small-300: 0.2rem;
+  --fs-small-400: 1rem;
+  --fs-small-500: 1.4rem;
+  --fs-small-700: 1.8rem;
+  --fs-large-300: 2rem;
+  --fs-large-400: 2.5rem;
+  --fs-large-500: 3rem;
+  --fs-large-600: 4rem;
 }
 
 *, *:before, *:after {
@@ -64,7 +72,7 @@ h3 {
 }
 
 h2 {
-  font-size: var(--fs-18);
+  font-size: var(--fs-small-700);
 }
 
 a,
@@ -76,7 +84,7 @@ a:active {
 
 html {
   scroll-behavior: smooth;
-  font-size: 10px;
+  font-size: var(--fs-10);
 }
 
 body {
@@ -92,9 +100,9 @@ img {
 
 p {
   margin-top: 5px;
-  line-height: 2rem;
+  line-height: var(--fs-large-400);
   color: rgb(0, 0, 0);
-  font-size: 1.4rem;
+  font-size: var(--fs-small-500);
   font-weight: 300;
   letter-spacing: 0.05rem;
 }
@@ -110,7 +118,7 @@ p {
   position: relative;
   width: fit-content;
   color: transparent;
-  font-size: 4rem;
+  font-size: var(--fs-large-600);
   animation: text-reveal 0.5s ease forwards;
   animation-delay: 1s;
 }
@@ -151,8 +159,8 @@ p {
   background-color: transparent;
   padding: 10px 30px;
   color: rgb(252, 252, 252);
-  letter-spacing: 0.2rem;
-  font-size: 2rem;
+  letter-spacing: var(--fs-small-300);
+  font-size: var(--fs-large-300);
   transition-property: background-color, color;
 }
 #hero .cta:hover {
@@ -203,9 +211,9 @@ p {
 }
 #services .section-title {
   margin-bottom: 10px;
-  letter-spacing: 0.2rem;
+  letter-spacing: var(--fs-small-300);
   color: rgb(0, 0, 0);
-  font-size: 4rem;
+  font-size: var(--fs-large-600);
   font-weight: 300;
 }
 #services .section-title span {
@@ -253,7 +261,7 @@ p {
   margin-bottom: 10px;
   text-transform: uppercase;
   color: rgb(252, 252, 252);
-  font-size: 2rem;
+  font-size: var(--fs-large-300);
 }
 #services .service-item p {
   text-align: left;

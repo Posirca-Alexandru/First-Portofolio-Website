@@ -9,7 +9,23 @@ $m-auto: 0 auto;
 //Transition
 $transition-03: 0.3s ease;
 
-//Elements
-h2 {
-    --fs-18: 1.8rem;
+//Size
+$sizes: (
+  small: (
+    300: 0.2rem,
+    400: 1rem,
+    500: 1.4rem,
+    700: 1.8rem,
+  ),
+  large: (
+    300: 2rem,
+    400: 2.5rem,
+    500: 3rem,
+    600: 4rem,
+  ),
+);
+
+//Elements - Custom value
+html {
+  --fs-10: 10px;
 }
