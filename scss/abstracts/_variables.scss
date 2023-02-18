@@ -1,9 +1,9 @@
 //Colors
 $transparent: transparent;
+$gradient-48: linear-gradient(60deg, #485563 0%, #38c 0%, #485563 70%);
 $black: rgb(0, 0, 0);
 $white: rgb(252, 252, 252);
 $crimson: rgb(220, 20, 60);
-$w-container: 1200px;
 $m-auto: 0 auto;
 
 //Transition
@@ -15,6 +15,7 @@ $sizes: (
     300: 0.2rem,
     400: 1rem,
     500: 1.4rem,
+    600: 1.6rem,
     700: 1.8rem,
   ),
   large: (
@@ -24,6 +25,8 @@ $sizes: (
     600: 4rem,
   ),
 );
+
+$w-container: 1200px;
 
 //Elements - Custom value
 html {

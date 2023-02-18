@@ -63,12 +63,7 @@
     }
   }
   &:after {
-    @include absolute-0;
-    @include size-full;
-    opacity: 0.2;
-    z-index: -1;
-    background-color: $black;
-    content: "";
+    @include absolute-c-0;
   }
   .hero {
     justify-content: flex-start;
