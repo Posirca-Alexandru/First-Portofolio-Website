@@ -107,6 +107,22 @@ p {
   letter-spacing: 0.05rem;
 }
 
+.cta {
+  display: inline-block;
+  transition: 0.3s ease;
+  margin-top: 30px;
+  border: 2px solid rgb(220, 20, 60);
+  background-color: transparent;
+  padding: 10px 30px;
+  letter-spacing: var(--fs-small-300);
+  font-size: var(--fs-large-300);
+  transition-property: background-color, color;
+}
+.cta:hover {
+  color: rgb(252, 252, 252);
+  background-color: rgb(220, 20, 60);
+}
+
 #hero {
   z-index: 1;
   background-image: url("/assets/img/background-hero.jpg");
@@ -152,20 +168,7 @@ p {
   animation-delay: 0.5s;
 }
 #hero .cta {
-  display: inline-block;
-  transition: 0.3s ease;
-  margin-top: 30px;
-  border: 2px solid rgb(220, 20, 60);
-  background-color: transparent;
-  padding: 10px 30px;
   color: rgb(252, 252, 252);
-  letter-spacing: var(--fs-small-300);
-  font-size: var(--fs-large-300);
-  transition-property: background-color, color;
-}
-#hero .cta:hover {
-  color: rgb(252, 252, 252);
-  background-color: rgb(220, 20, 60);
 }
 #hero:after {
   position: absolute;
@@ -321,6 +324,47 @@ p {
   opacity: 0.8;
   z-index: auto;
   background-image: linear-gradient(60deg, #485563 0%, #38c 0%, #485563 70%);
+}
+
+#about .about {
+  flex-direction: column-reverse;
+  padding: 100px 20px;
+}
+#about .col-left {
+  width: 250px;
+  height: 360px;
+}
+#about .col-left .about-img {
+  position: relative;
+  border: 10px solid var(--background-color);
+  width: 100%;
+  height: 100%;
+}
+#about .col-left .about-img::after {
+  position: absolute;
+  top: 19px;
+  left: -33px;
+  z-index: -1;
+  border: 7px solid rgb(220, 20, 60);
+  width: 98%;
+  height: 100%;
+  content: "";
+}
+#about .col-right {
+  width: 100%;
+}
+#about .col-right h2 {
+  margin-bottom: 10px;
+  letter-spacing: var(--fs-small-300);
+}
+#about .col-right p {
+  margin-bottom: 20px;
+}
+#about .col-right .cta {
+  margin-bottom: 50px;
+  padding: 10px 20px;
+  color: rgb(0, 0, 0);
+  font-size: var(--fs-large-300);
 }
 
 .container {
