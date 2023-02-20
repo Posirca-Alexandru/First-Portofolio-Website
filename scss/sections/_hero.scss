@@ -5,58 +5,55 @@
   background-image: url("/assets/img/background-hero.jpg");
   background-position: top center;
   background-size: cover;
-
-  h1 {
-    display: block;
-    position: relative;
-    width: fit-content;
-    color: $transparent;
-    font-size: var(--fs-large-600);
-    @include animate(text-reveal, 0.5s, ease, forwards);
-    animation-delay: 1s;
-    font-weight: 700;
-
-    &:nth-child(1) {
+  .hero {
+    padding: 0 50px;
+    max-width: $w-container;
+    h1 {
+      display: block;
+      position: relative;
+      width: fit-content;
+      color: $transparent;
+      font-size: var(--fs-large-600);
+      @include animate(text-reveal, 0.5s, ease, forwards);
       animation-delay: 1s;
+      font-weight: 700;
+
+      &:nth-child(1) {
+        animation-delay: 1s;
+        span {
+          animation-delay: 0.5s;
+        }
+      }
+      &:nth-child(2) {
+        animation-delay: 2s;
+
+        span {
+          animation-delay: 1.5s;
+        }
+      }
+      &:nth-child(3) {
+        @include animate(text-reveal-name, 0.5s, ease, forwards);
+        animation-delay: 3s;
+        span {
+          animation-delay: 2.5s;
+        }
+      }
+
       span {
+        @include absolute-0;
+        height: 100%;
+        width: 0;
+        background-color: $crimson;
+        @include animate(text-reveal-box, 1s, ease, 1);
         animation-delay: 0.5s;
       }
     }
-    &:nth-child(2) {
-      animation-delay: 2s;
-
-      span {
-        animation-delay: 1.5s;
-      }
+    .cta {
+      color: $white;
     }
-    &:nth-child(3) {
-      @include animate(text-reveal-name, 0.5s, ease, forwards);
-      animation-delay: 3s;
-      span {
-        animation-delay: 2.5s;
-      }
+    &:after {
+      @include absolute-c-0;
     }
-
-    span {
-      @include absolute-0;
-      height: 100%;
-      width: 0;
-      background-color: $crimson;
-      @include animate(text-reveal-box, 1s, ease, 1);
-      animation-delay: 0.5s;
-    }
-  }
-  .cta {
-    color: $white;
-  }
-  &:after {
-    @include absolute-c-0;
-  }
-  .hero {
-    justify-content: flex-start;
-    margin: $m-auto;
-    padding: 0 50px;
-    max-width: $w-container;
   }
 }
 

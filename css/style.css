@@ -137,7 +137,11 @@ p {
   background-position: top center;
   background-size: cover;
 }
-#hero h1 {
+#hero .hero {
+  padding: 0 50px;
+  max-width: 1200px;
+}
+#hero .hero h1 {
   display: block;
   position: relative;
   width: fit-content;
@@ -147,26 +151,26 @@ p {
   animation-delay: 1s;
   font-weight: 700;
 }
-#hero h1:nth-child(1) {
+#hero .hero h1:nth-child(1) {
   animation-delay: 1s;
 }
-#hero h1:nth-child(1) span {
+#hero .hero h1:nth-child(1) span {
   animation-delay: 0.5s;
 }
-#hero h1:nth-child(2) {
+#hero .hero h1:nth-child(2) {
   animation-delay: 2s;
 }
-#hero h1:nth-child(2) span {
+#hero .hero h1:nth-child(2) span {
   animation-delay: 1.5s;
 }
-#hero h1:nth-child(3) {
+#hero .hero h1:nth-child(3) {
   animation: text-reveal-name 0.5s ease forwards;
   animation-delay: 3s;
 }
-#hero h1:nth-child(3) span {
+#hero .hero h1:nth-child(3) span {
   animation-delay: 2.5s;
 }
-#hero h1 span {
+#hero .hero h1 span {
   position: absolute;
   top: 0;
   left: 0;
@@ -176,10 +180,10 @@ p {
   animation: text-reveal-box 1s ease 1;
   animation-delay: 0.5s;
 }
-#hero .cta {
+#hero .hero .cta {
   color: rgb(252, 252, 252);
 }
-#hero:after {
+#hero .hero:after {
   position: absolute;
   top: 0;
   left: 0;
@@ -189,12 +193,6 @@ p {
   width: 100%;
   height: 100%;
   content: "";
-}
-#hero .hero {
-  justify-content: flex-start;
-  margin: 0 auto;
-  padding: 0 50px;
-  max-width: 1200px;
 }
 
 @keyframes text-reveal-box {
@@ -225,18 +223,21 @@ p {
 #services .services {
   max-width: 1500px;
 }
-#services .service-bottom {
+#services .services .service-top {
+  width: 500px;
+}
+#services .services .service-bottom {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 50px;
 }
-#services .service-bottom .icon {
+#services .services .service-bottom .icon {
   margin-bottom: 20px;
   width: 80px;
   height: 80px;
 }
-#services .service-item {
+#services .services .service-bottom .service-item {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -252,7 +253,7 @@ p {
   padding: 30px;
   color: rgb(252, 252, 252);
 }
-#services .service-item::after {
+#services .services .service-bottom .service-item::after {
   position: absolute;
   top: 0;
   left: 0;
@@ -264,21 +265,27 @@ p {
   content: "";
   opacity: 0.5;
 }
-#services .service-item h2 {
+#services .services .service-bottom .service-item h2 {
   margin-bottom: 10px;
   text-transform: uppercase;
   color: rgb(252, 252, 252);
   font-size: var(--fs-large-300);
 }
-#services .service-item p {
+#services .services .service-bottom .service-item p {
   text-align: left;
   color: rgb(252, 252, 252);
 }
 
 @media only screen and (min-width: 48rem) {
-  #services .service-bottom .service-item {
+  #services .services .service-bottom .service-item {
     flex-basis: 45%;
     margin: 2.5%;
+  }
+}
+@media only screen and (min-width: 75rem) {
+  #services .services .service-bottom .service-item {
+    flex-basis: 22%;
+    margin: 1.5%;
   }
 }
 #projects .projects-header h1 {
@@ -298,7 +305,7 @@ p {
 #projects .project-item:hover .project-img img {
   transform: scale(1.1);
 }
-#projects .project-info {
+#projects .project-item .project-info {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -311,27 +318,27 @@ p {
   background-image: linear-gradient(60deg, #485563 0%, #38c 0%, #485563 70%);
   color: rgb(252, 252, 252);
 }
-#projects .project-info h2 {
+#projects .project-item .project-info h2 {
   font-size: var(--fs-large-400);
   font-weight: 600;
 }
-#projects .project-info h3 {
+#projects .project-item .project-info h3 {
   margin-top: 10px;
   font-size: var(--fs-small-600);
 }
-#projects .project-info p {
+#projects .project-item .project-info p {
   color: rgb(252, 252, 252);
 }
-#projects .project-img {
+#projects .project-item .project-img {
   position: relative;
   overflow: hidden;
   flex-basis: 50%;
   height: 300px;
 }
-#projects .project-img img {
+#projects .project-item .project-img img {
   transition: 0.3s ease transform;
 }
-#projects .project-img:after {
+#projects .project-item .project-img:after {
   position: absolute;
   top: 0;
   left: 0;
@@ -365,19 +372,18 @@ p {
   }
 }
 #about .about {
-  flex-direction: column-reverse;
   padding: 100px 20px;
 }
-#about .col-left {
+#about .about .col-left {
   width: 250px;
   height: 360px;
 }
-#about .col-left .about-img {
+#about .about .col-left .about-img {
   border: 10px solid var(--background-color);
   width: 100%;
   height: 100%;
 }
-#about .col-left .about-img::after {
+#about .about .col-left .about-img::after {
   position: absolute;
   top: 19px;
   left: -33px;
@@ -387,17 +393,17 @@ p {
   height: 100%;
   content: "";
 }
-#about .col-right {
+#about .about .col-right {
   width: 100%;
 }
-#about .col-right h2 {
+#about .about .col-right h2 {
   margin-bottom: 10px;
   letter-spacing: var(--fs-small-300);
 }
-#about .col-right p {
+#about .about .col-right p {
   margin-bottom: 20px;
 }
-#about .col-right .cta {
+#about .about .col-right .cta {
   margin-bottom: 50px;
   padding: 10px 20px;
   color: rgb(0, 0, 0);
@@ -549,11 +555,17 @@ p {
 .flex-jc-c {
   justify-content: center;
 }
+.flex-jc-fs {
+  justify-content: flex-start;
+}
 .flex-ai-c {
   align-items: center;
 }
 .flex-fd-c {
   flex-direction: column;
+}
+.flex-fd-c-r {
+  flex-direction: column-reverse;
 }
 .flex-fw-w {
   flex-wrap: wrap;

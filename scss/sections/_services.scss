@@ -3,42 +3,45 @@
 #services {
   .services {
     max-width: 1500px;
-  }
-  .service-bottom {
-    @include flex-c-c;
-    margin-top: 50px;
-    .icon {
-      margin-bottom: 20px;
-      width: 80px;
-      height: 80px;
+    .service-top {
+      width: 500px;
     }
-  }
-  .service-item {
-    @include flex-c-col;
-    @include relative-h;
-    flex-basis: 80%;
-    align-items: flex-start;
-    z-index: 1;
-    margin: 10px 5%;
-    border-radius: 10px;
-    background-image: url("/assets/img/service-item.jpg");
-    background-size: cover;
-    padding: 30px;
-    color: $white;
+    .service-bottom {
+      @include flex-c-c;
+      margin-top: 50px;
+      .icon {
+        margin-bottom: 20px;
+        width: 80px;
+        height: 80px;
+      }
+      .service-item {
+        @include flex-c-col;
+        @include relative-h;
+        flex-basis: 80%;
+        align-items: flex-start;
+        z-index: 1;
+        margin: 10px 5%;
+        border-radius: 10px;
+        background-image: url("/assets/img/service-item.jpg");
+        background-size: cover;
+        padding: 30px;
+        color: $white;
 
-    &::after {
-      @include absolute-c-0;
-      opacity: 0.5;
-    }
-    h2 {
-      margin-bottom: 10px;
-      text-transform: uppercase;
-      color: $white;
-      font-size: var(--fs-large-300);
-    }
-    p {
-      text-align: left;
-      color: $white;
+        &::after {
+          @include absolute-c-0;
+          opacity: 0.5;
+        }
+        h2 {
+          margin-bottom: 10px;
+          text-transform: uppercase;
+          color: $white;
+          font-size: var(--fs-large-300);
+        }
+        p {
+          text-align: left;
+          color: $white;
+        }
+      }
     }
   }
 }
@@ -46,10 +49,25 @@
 //Media Queries
 @include mq(small) {
   #services {
-    .service-bottom {
-      .service-item {
-        flex-basis: 45%;
-        margin: 2.5%;
+    .services {
+      .service-bottom {
+        .service-item {
+          flex-basis: 45%;
+          margin: 2.5%;
+        }
+      }
+    }
+  }
+}
+
+@include mq(large) {
+  #services {
+    .services {
+      .service-bottom {
+        .service-item {
+          flex-basis: 22%;
+          margin: 1.5%;
+        }
       }
     }
   }

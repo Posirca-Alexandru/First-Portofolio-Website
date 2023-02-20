@@ -20,40 +20,40 @@
         }
       }
     }
-  }
-  .project-info {
-    @include flex-c-c-col;
-    flex-basis: 50%;
-    align-items: start;
-    padding: 30px;
-    height: 100%;
-    background-color: $white;
-    background-image: $gradient-48;
-    color: $white;
-    h2 {
-      font-size: var(--fs-large-400);
-      font-weight: 600;
-    }
-    h3 {
-      margin-top: 10px;
-      font-size: var(--fs-small-600);
-    }
-    p {
-      color: $white;
-    }
-  }
-  .project-img {
-    @include relative-h;
-    flex-basis: 50%;
-    height: 300px;
-    img {
-      transition: $transition-03 transform;
-    }
-    &:after {
-      @include absolute-c-0;
-      opacity: 0.8;
-      z-index: auto;
+    .project-info {
+      @include flex-c-c-col;
+      flex-basis: 50%;
+      align-items: start;
+      padding: 30px;
+      height: 100%;
+      background-color: $white;
       background-image: $gradient-48;
+      color: $white;
+      h2 {
+        font-size: var(--fs-large-400);
+        font-weight: 600;
+      }
+      h3 {
+        margin-top: 10px;
+        font-size: var(--fs-small-600);
+      }
+      p {
+        color: $white;
+      }
+    }
+    .project-img {
+      @include relative-h;
+      flex-basis: 50%;
+      height: 300px;
+      img {
+        transition: $transition-03 transform;
+      }
+      &:after {
+        @include absolute-c-0;
+        opacity: 0.8;
+        z-index: auto;
+        background-image: $gradient-48;
+      }
     }
   }
 }
