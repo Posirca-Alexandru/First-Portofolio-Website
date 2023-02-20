@@ -3,7 +3,7 @@ html {
 }
 
 :root {
-  --background-color: rgb(240, 240, 240);
+  --background-color: rgb(254, 242, 242);
   --fs-small-300: 0.2rem;
   --fs-small-400: 1rem;
   --fs-small-500: 1.4rem;
@@ -13,6 +13,8 @@ html {
   --fs-large-400: 2.5rem;
   --fs-large-500: 3rem;
   --fs-large-600: 4rem;
+  --fs-large-700: 6rem;
+  --fs-large-800: 7rem;
 }
 
 *, *:before, *:after {
@@ -123,6 +125,12 @@ p {
   background-color: rgb(220, 20, 60);
 }
 
+@media only screen and (min-width: 48rem) {
+  .cta {
+    padding: 20px 60px;
+    font-size: var(--fs-large-400);
+  }
+}
 #hero {
   z-index: 1;
   background-image: url("/assets/img/background-hero.jpg");
@@ -137,6 +145,7 @@ p {
   font-size: var(--fs-large-600);
   animation: text-reveal 0.5s ease forwards;
   animation-delay: 1s;
+  font-weight: 700;
 }
 #hero h1:nth-child(1) {
   animation-delay: 1s;
@@ -208,6 +217,11 @@ p {
     color: rgb(220, 20, 60);
   }
 }
+@media only screen and (min-width: 48rem) {
+  #hero h1 {
+    font-size: var(--fs-large-700);
+  }
+}
 #services .services {
   max-width: 1500px;
 }
@@ -261,6 +275,12 @@ p {
   color: rgb(252, 252, 252);
 }
 
+@media only screen and (min-width: 48rem) {
+  #services .service-bottom .service-item {
+    flex-basis: 45%;
+    margin: 2.5%;
+  }
+}
 #projects .projects-header h1 {
   margin-bottom: 50px;
 }
@@ -326,6 +346,24 @@ p {
   background-image: linear-gradient(60deg, #485563 0%, #38c 0%, #485563 70%);
 }
 
+@media only screen and (min-width: 48rem) {
+  #projects .all-projects .project-item {
+    flex-direction: row;
+    margin: 0;
+    border-radius: 0;
+    width: 100%;
+    height: 400px;
+  }
+  #projects .all-projects .project-item .project-info {
+    height: 100%;
+  }
+  #projects .all-projects .project-item .project-img {
+    height: 100%;
+  }
+  #projects .all-projects .project-item:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+}
 #about .about {
   flex-direction: column-reverse;
   padding: 100px 20px;
@@ -335,7 +373,6 @@ p {
   height: 360px;
 }
 #about .col-left .about-img {
-  position: relative;
   border: 10px solid var(--background-color);
   width: 100%;
   height: 100%;
@@ -367,6 +404,29 @@ p {
   font-size: var(--fs-large-300);
 }
 
+@media only screen and (min-width: 48rem) {
+  #about .about {
+    flex-direction: row;
+  }
+  #about .about .col-left {
+    padding-left: 60px;
+    width: 600px;
+    height: 400px;
+  }
+  #about .about .col-left .about-img::after {
+    top: 34px;
+    left: -45px;
+    border: 10px solid rgb(220, 20, 60);
+    height: 98%;
+  }
+  #about .about .col-right {
+    padding: 30px;
+    text-align: left;
+  }
+  #about .about .col-right h1 {
+    text-align: left;
+  }
+}
 #contact .contact-items {
   width: 400px;
 }
@@ -399,6 +459,36 @@ p {
   box-shadow: 0 0 5px 0 rgb(81, 93, 99);
 }
 
+@media only screen and (min-width: 48rem) {
+  #contact .contact {
+    min-height: 20vh;
+  }
+  #contact .contact .contact-items {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 20px;
+    width: 100%;
+  }
+  #contact .contact .contact-items .contact-item {
+    flex-direction: row;
+    margin: 20px;
+    width: 30%;
+  }
+  #contact .contact .contact-items .contact-item .icon {
+    width: 100px;
+    height: 100px;
+  }
+  #contact .contact .contact-items .contact-item .icon img {
+    object-fit: contain;
+  }
+  #contact .contact .contact-items .contact-item .contact-info {
+    padding-left: 20px;
+    width: 100%;
+    text-align: left;
+    word-break: break-all;
+  }
+}
 #footer {
   background-image: linear-gradient(60deg, #485563 0%, #38c 0%, #485563 70%);
 }
@@ -470,7 +560,7 @@ p {
 }
 
 .relative {
-  position: relativde;
+  position: relative;
 }
 
 .absolute {
@@ -498,6 +588,12 @@ p {
 }
 .section-title span {
   color: rgb(220, 20, 60);
+}
+
+@media only screen and (min-width: 48rem) {
+  .section-title {
+    font-size: var(--fs-large-600);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

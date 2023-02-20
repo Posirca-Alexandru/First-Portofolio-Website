@@ -32,3 +32,37 @@
     }
   }
 }
+
+//Media Queries
+@include mq(small) {
+  #contact {
+    .contact {
+      min-height: 20vh;
+      .contact-items {
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        padding: 20px;
+        width: 100%;
+        .contact-item {
+          flex-direction: row;
+          margin: 20px;
+          width: 30%;
+          .icon {
+            width: 100px;
+            height: 100px;
+            img {
+              object-fit: contain;
+            }
+          }
+          .contact-info {
+            padding-left: 20px;
+            width: 100%;
+            text-align: left;
+            word-break: break-all;
+          }
+        }
+      }
+    }
+  }
+}

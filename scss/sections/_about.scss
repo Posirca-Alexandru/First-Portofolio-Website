@@ -10,7 +10,6 @@
     height: 360px;
 
     .about-img {
-      position: relative;
       border: 10px solid var(--background-color);
       width: 100%;
       height: 100%;
@@ -41,6 +40,35 @@
       padding: 10px 20px;
       color: $black;
       font-size: var(--fs-large-300);
+    }
+  }
+}
+
+//Media Queries
+@include mq(small) {
+  #about {
+    .about {
+      flex-direction: row;
+      .col-left {
+        padding-left: 60px;
+        width: 600px;
+        height: 400px;
+        .about-img {
+          &::after {
+            top: 34px;
+            left: -45px;
+            border: 10px solid $crimson;
+            height: 98%;
+          }
+        }
+      }
+      .col-right {
+        padding: 30px;
+        text-align: left;
+        h1 {
+          text-align: left;
+        }
+      }
     }
   }
 }

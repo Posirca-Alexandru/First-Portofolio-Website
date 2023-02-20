@@ -42,3 +42,15 @@
     }
   }
 }
+
+//Media Queries
+@include mq(small) {
+  #services {
+    .service-bottom {
+      .service-item {
+        flex-basis: 45%;
+        margin: 2.5%;
+      }
+    }
+  }
+}

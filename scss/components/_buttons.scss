@@ -16,3 +16,11 @@
     background-color: $crimson;
   }
 }
+
+//Media Queries
+@include mq(small) {
+  .cta {
+    padding: 20px 60px;
+    font-size: var(--fs-large-400);
+  }
+}

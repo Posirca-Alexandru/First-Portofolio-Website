@@ -1,7 +1,7 @@
 @use "./variables" as *;
 
 :root {
-  --background-color: rgb(240, 240, 240);
+  --background-color: rgb(254, 242, 242);
 
   @each $size, $types in $sizes {
     @each $type, $value in $types {

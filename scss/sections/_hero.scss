@@ -14,6 +14,7 @@
     font-size: var(--fs-large-600);
     @include animate(text-reveal, 0.5s, ease, forwards);
     animation-delay: 1s;
+    font-weight: 700;
 
     &:nth-child(1) {
       animation-delay: 1s;
@@ -45,7 +46,7 @@
       animation-delay: 0.5s;
     }
   }
-  .cta {  
+  .cta {
     color: $white;
   }
   &:after {
@@ -80,5 +81,14 @@
 @include keyframes(text-reveal-name) {
   100% {
     color: $crimson;
+  }
+}
+
+//Media Queries
+@include mq(small) {
+  #hero {
+    h1 {
+      font-size: var(--fs-large-700);
+    }
   }
 }

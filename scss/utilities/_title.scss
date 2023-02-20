@@ -12,3 +12,10 @@
     color: $crimson;
   }
 }
+
+//Media Queries
+@include mq(small) {
+  .section-title {
+    font-size: var(--fs-large-600);
+  }
+}
