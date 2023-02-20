@@ -3,7 +3,7 @@ html {
 }
 
 :root {
-  --background-color: rgb(254, 242, 242);
+  --background-color: rgb(255, 255, 255);
   --fs-small-300: 0.2rem;
   --fs-small-400: 1rem;
   --fs-small-500: 1.4rem;
@@ -220,24 +220,28 @@ p {
     font-size: var(--fs-large-700);
   }
 }
-#services .services {
+#technologies .technologies {
   max-width: 1500px;
 }
-#services .services .service-top {
+#technologies .technologies .tech-top {
   width: 500px;
 }
-#services .services .service-bottom {
+#technologies .technologies .tech-top h1 span {
+  margin-top: 5px;
+  font-size: var(--fs-large-300);
+}
+#technologies .technologies .tech-bottom {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 10px;
 }
-#services .services .service-bottom .icon {
+#technologies .technologies .tech-bottom .icon {
   margin-bottom: 20px;
   width: 80px;
   height: 80px;
 }
-#services .services .service-bottom .service-item {
+#technologies .technologies .tech-bottom .tech-item {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -248,12 +252,12 @@ p {
   z-index: 1;
   margin: 10px 5%;
   border-radius: 10px;
-  background-image: url("/assets/img/service-item.jpg");
+  background-image: url("/assets/img/tech-item.jpg");
   background-size: cover;
   padding: 30px;
   color: rgb(252, 252, 252);
 }
-#services .services .service-bottom .service-item::after {
+#technologies .technologies .tech-bottom .tech-item::after {
   position: absolute;
   top: 0;
   left: 0;
@@ -263,27 +267,21 @@ p {
   width: 100%;
   height: 100%;
   content: "";
-  opacity: 0.5;
+  opacity: 0.2;
 }
-#services .services .service-bottom .service-item h2 {
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  color: rgb(252, 252, 252);
-  font-size: var(--fs-large-300);
-}
-#services .services .service-bottom .service-item p {
+#technologies .technologies .tech-bottom .tech-item p {
   text-align: left;
   color: rgb(252, 252, 252);
 }
 
 @media only screen and (min-width: 48rem) {
-  #services .services .service-bottom .service-item {
+  #technologies .technologies .tect-bottom .tech-item {
     flex-basis: 45%;
     margin: 2.5%;
   }
 }
 @media only screen and (min-width: 75rem) {
-  #services .services .service-bottom .service-item {
+  #technologies .technologies .tech-bottom .tech-item {
     flex-basis: 22%;
     margin: 1.5%;
   }
@@ -359,7 +357,7 @@ p {
     margin: 0;
     border-radius: 0;
     width: 100%;
-    height: 400px;
+    height: 300px;
   }
   #projects .all-projects .project-item .project-info {
     height: 100%;
@@ -569,6 +567,9 @@ p {
 }
 .flex-fw-w {
   flex-wrap: wrap;
+}
+.flex-ff-c {
+  flex-flow: column;
 }
 
 .relative {

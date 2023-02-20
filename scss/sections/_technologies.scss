@@ -1,20 +1,26 @@
 @use "../abstracts" as *;
 
-#services {
-  .services {
+#technologies {
+  .technologies {
     max-width: 1500px;
-    .service-top {
+    .tech-top {
       width: 500px;
+      h1 {
+        span {
+          margin-top: 5px;
+          font-size: var(--fs-large-300);
+        }
+      }
     }
-    .service-bottom {
+    .tech-bottom {
       @include flex-c-c;
-      margin-top: 50px;
+      margin-top: 10px;
       .icon {
         margin-bottom: 20px;
         width: 80px;
         height: 80px;
       }
-      .service-item {
+      .tech-item {
         @include flex-c-col;
         @include relative-h;
         flex-basis: 80%;
@@ -22,20 +28,14 @@
         z-index: 1;
         margin: 10px 5%;
         border-radius: 10px;
-        background-image: url("/assets/img/service-item.jpg");
+        background-image: url("/assets/img/tech-item.jpg");
         background-size: cover;
         padding: 30px;
         color: $white;
 
         &::after {
           @include absolute-c-0;
-          opacity: 0.5;
-        }
-        h2 {
-          margin-bottom: 10px;
-          text-transform: uppercase;
-          color: $white;
-          font-size: var(--fs-large-300);
+          opacity: 0.2;
         }
         p {
           text-align: left;
@@ -48,10 +48,10 @@
 
 //Media Queries
 @include mq(small) {
-  #services {
-    .services {
-      .service-bottom {
-        .service-item {
+  #technologies {
+    .technologies {
+      .tect-bottom {
+        .tech-item {
           flex-basis: 45%;
           margin: 2.5%;
         }
@@ -61,10 +61,10 @@
 }
 
 @include mq(large) {
-  #services {
-    .services {
-      .service-bottom {
-        .service-item {
+  #technologies {
+    .technologies {
+      .tech-bottom {
+        .tech-item {
           flex-basis: 22%;
           margin: 1.5%;
         }
