@@ -3,7 +3,7 @@
 .cta {
   display: inline-block;
   transition: $transition-03;
-  margin-top: 30px;
+  margin-top: 20px;
   border: 2px solid $crimson;
   background-color: $transparent;
   padding: 10px 30px;
@@ -20,7 +20,7 @@
 //Media Queries
 @include mq(small) {
   .cta {
-    padding: 20px 60px;
+    padding: 10px 50px;
     font-size: var(--fs-large-400);
   }
 }

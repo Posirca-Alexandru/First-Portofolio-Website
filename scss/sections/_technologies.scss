@@ -4,10 +4,10 @@
   .technologies {
     max-width: 1500px;
     .tech-top {
-      width: 500px;
+      max-width: 500px;
       h1 {
         span {
-          margin-top: 5px;
+          margin: 5px 0 5px;
           font-size: var(--fs-large-300);
         }
       }
@@ -50,7 +50,7 @@
 @include mq(small) {
   #technologies {
     .technologies {
-      .tect-bottom {
+      .tech-bottom {
         .tech-item {
           flex-basis: 45%;
           margin: 2.5%;

@@ -9,7 +9,7 @@
       margin: 30px;
       border-radius: 10px;
       box-shadow: 0 0 18px 0 $black-light;
-      padding: 30px;
+      padding: 20px;
       width: 80%;
       text-align: center;
       .icon {
@@ -23,7 +23,7 @@
           font-size: var(--fs-large-400);
         }
         h3 {
-          font-size: var(--fs-small-500);
+          font-size: var(--fs-small-600);
         }
       }
       &:hover {
@@ -41,13 +41,15 @@
       .contact-items {
         display: flex;
         flex-direction: row;
+        justify-content: space-evenly;
         margin: 0;
-        padding: 20px;
+        padding: 20px 0;
         width: 100%;
         .contact-item {
           flex-direction: row;
-          margin: 20px;
-          width: 30%;
+          margin: 20px 0;
+          padding: 15px 10px 15px 35px;
+          width: 28%;
           .icon {
             width: 100px;
             height: 100px;

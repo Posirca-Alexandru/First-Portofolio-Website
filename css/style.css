@@ -112,7 +112,7 @@ p {
 .cta {
   display: inline-block;
   transition: 0.3s ease;
-  margin-top: 30px;
+  margin-top: 20px;
   border: 2px solid rgb(220, 20, 60);
   background-color: transparent;
   padding: 10px 30px;
@@ -127,7 +127,7 @@ p {
 
 @media only screen and (min-width: 48rem) {
   .cta {
-    padding: 20px 60px;
+    padding: 10px 50px;
     font-size: var(--fs-large-400);
   }
 }
@@ -211,7 +211,6 @@ p {
   margin-right: 20px;
   border: 3px solid rgb(252, 252, 252);
   border-radius: 50%;
-  cursor: pointer;
   width: 60px;
   height: 60px;
 }
@@ -377,10 +376,10 @@ p {
   max-width: 1500px;
 }
 #technologies .technologies .tech-top {
-  width: 500px;
+  max-width: 500px;
 }
 #technologies .technologies .tech-top h1 span {
-  margin-top: 5px;
+  margin: 5px 0 5px;
   font-size: var(--fs-large-300);
 }
 #technologies .technologies .tech-bottom {
@@ -428,7 +427,7 @@ p {
 }
 
 @media only screen and (min-width: 48rem) {
-  #technologies .technologies .tect-bottom .tech-item {
+  #technologies .technologies .tech-bottom .tech-item {
     flex-basis: 45%;
     margin: 2.5%;
   }
@@ -440,7 +439,7 @@ p {
   }
 }
 #projects .projects-header h1 {
-  margin-bottom: 50px;
+  margin-bottom: 0;
 }
 #projects .project-item {
   display: flex;
@@ -549,17 +548,17 @@ p {
   width: 100%;
 }
 #about .about .col-right h2 {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   letter-spacing: var(--fs-small-300);
 }
-#about .about .col-right p {
-  margin-bottom: 20px;
-}
 #about .about .col-right .cta {
-  margin-bottom: 50px;
+  margin: 30px 0;
   padding: 10px 20px;
   color: rgb(0, 0, 0);
   font-size: var(--fs-large-300);
+}
+#about .about .col-right .cta:hover {
+  color: rgb(252, 252, 252);
 }
 
 @media only screen and (min-width: 48rem) {
@@ -597,7 +596,7 @@ p {
   margin: 30px;
   border-radius: 10px;
   box-shadow: 0 0 18px 0 rgb(81, 93, 99);
-  padding: 30px;
+  padding: 20px;
   width: 80%;
   text-align: center;
 }
@@ -611,7 +610,7 @@ p {
   font-size: var(--fs-large-400);
 }
 #contact .contact-items .contact-item .contact-info h3 {
-  font-size: var(--fs-small-500);
+  font-size: var(--fs-small-600);
 }
 #contact .contact-items .contact-item:hover {
   box-shadow: 0 0 5px 0 rgb(81, 93, 99);
@@ -624,14 +623,16 @@ p {
   #contact .contact .contact-items {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
     margin: 0;
-    padding: 20px;
+    padding: 20px 0;
     width: 100%;
   }
   #contact .contact .contact-items .contact-item {
     flex-direction: row;
-    margin: 20px;
-    width: 30%;
+    margin: 20px 0;
+    padding: 15px 10px 15px 35px;
+    width: 28%;
   }
   #contact .contact .contact-items .contact-item .icon {
     width: 100px;
@@ -743,6 +744,10 @@ p {
 }
 .text-uppercase {
   text-transform: uppercase;
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 .m-auto {
