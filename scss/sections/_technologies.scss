@@ -16,7 +16,7 @@
       @include flex-c-c;
       margin-top: 10px;
       .icon {
-        margin-bottom: 20px;
+        // margin-bottom: 5px;
         width: 80px;
         height: 80px;
       }
@@ -41,6 +41,14 @@
           text-align: left;
           color: $white;
         }
+        .tools {
+          margin-left: 15px;
+          list-style: circle;
+          font-size: var(--fs-small-500);
+          li {
+            padding: 4px 0;
+          }
+        }
       }
     }
   }
@@ -53,7 +61,14 @@
       .tech-bottom {
         .tech-item {
           flex-basis: 45%;
+          justify-content: start;
           margin: 2.5%;
+          height: 275px;
+          .tools {
+            li {
+              padding: 2px 0;
+            }
+          }
         }
       }
     }
@@ -67,6 +82,12 @@
         .tech-item {
           flex-basis: 22%;
           margin: 1.5%;
+          height: 300px;
+          .tools {
+           li {
+            padding: 3px 0;
+          }
+          }
         }
       }
     }
