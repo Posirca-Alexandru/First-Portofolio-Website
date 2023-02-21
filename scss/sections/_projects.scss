@@ -25,7 +25,7 @@
       flex-basis: 50%;
       align-items: start;
       padding: 30px;
-      height: 100%;
+      @include size-full;
       background-color: $white;
       background-image: $gradient-48;
       color: $white;
@@ -66,7 +66,7 @@
         flex-direction: row;
         margin: 0;
         border-radius: 0;
-        width: 100%;
+        width: 98%;
         height: 300px;
         .project-info {
           height: 100%;
