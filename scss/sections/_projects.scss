@@ -54,7 +54,6 @@
         &:after {
           @include absolute-c-0;
           opacity: 0.8;
-          z-index: auto;
           background-image: $gradient-48;
         }
       }
@@ -82,6 +81,9 @@
           }
           .project-img {
             height: 100%;
+            &:after {
+              z-index: auto;
+            }
           }
           &:nth-child(even) {
             flex-direction: row-reverse;
