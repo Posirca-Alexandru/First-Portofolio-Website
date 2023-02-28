@@ -2,11 +2,11 @@
 
 #hero {
   z-index: 1;
-  background-image: url("/assets/img/background-hero2.jpg");
+  background-image: url("../assets/img/background-hero-mobile.jpg");
   background-position: top center;
   background-size: cover;
   .hero {
-    padding: 0 50px;
+    padding: 0 50px 265px;
     max-width: $w-container;
     h1 {
       display: block;
@@ -84,8 +84,12 @@
 //Media Queries
 @include mq(small) {
   #hero {
-    h1 {
-      font-size: var(--fs-large-700);
+    background-image: url("../assets/img/background-hero-desktop.jpg");
+    .hero {
+      padding: 0 50px;
+      h1 {
+        font-size: var(--fs-large-700);
+      }
     }
   }
 }

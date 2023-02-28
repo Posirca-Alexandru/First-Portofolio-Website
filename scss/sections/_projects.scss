@@ -12,16 +12,20 @@
       @include flex-c-c-col;
       margin: 20px auto;
       border-radius: 10px;
-      cursor: pointer;
       width: 80%;
       overflow: hidden;
-      &:hover {
-        .project-img {
+      .project-img {
+        cursor: pointer;
+        &:hover {
           img {
             transform: scale(1.1);
           }
+          &::after {
+            position: relative;
+          }
         }
       }
+
       .project-info {
         @include flex-c-c-col;
         flex-basis: 50%;
@@ -62,9 +66,9 @@
 @include mq(small) {
   #projects {
     .projects {
-      padding-bottom: 60px;
+      padding: 182px 0 60px;
       .projects-header {
-        margin-bottom: 50px;
+        margin-bottom: 40px;
       }
       .all-projects {
         .project-item {

@@ -11,16 +11,17 @@
     .nav-bar {
       @include size-full;
       max-width: 1300px;
-      padding-left: 15px;
+      padding-left: 40px;
       .brand {
         h1 {
           margin-bottom: 0;
+          padding-right: 10px;
           font-weight: 600;
           color: $white;
           font-size: var(--fs-large-300);
           span {
             &:nth-child(2) {
-              margin-left: 10px;
+              margin-left: 7px;
             }
           }
         }
