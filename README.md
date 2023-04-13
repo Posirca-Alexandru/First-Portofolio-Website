@@ -3,3 +3,4 @@ Implemented a first portfolio site where I synthesized all my personal experienc
 
 The technologies used in the development of this portfolio website were HTML, Sass and JavaScript.
 
+Website deployed: https://posirca-alexandru.github.io/Portfolio-Website/
