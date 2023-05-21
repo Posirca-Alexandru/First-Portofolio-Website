@@ -447,6 +447,9 @@ p {
   width: 32px;
   height: 32px;
 }
+#technologies .technologies .tech-bottom .tech-item .second-column-tools {
+  margin-left: 35px;
+}
 #technologies .technologies .tech-bottom .tech-item .tools {
   margin: 3px 0 0 15px;
   list-style: circle;
@@ -454,9 +457,6 @@ p {
 }
 #technologies .technologies .tech-bottom .tech-item .tools li {
   padding: 4px 0;
-}
-#technologies .technologies .tech-bottom .tech-item .tools .second-column-tools {
-  margin-left: 35px;
 }
 
 @media only screen and (min-width: 48rem) {

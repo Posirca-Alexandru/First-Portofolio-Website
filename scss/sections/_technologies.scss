@@ -51,15 +51,16 @@
             height: 32px;
           }
         }
+        .second-column-tools {
+          margin-left: 35px;
+          
+        }
         .tools {
           margin: 3px 0 0 15px;
           list-style: circle;
           font-size: var(--fs-small-500);
           li {
             padding: 4px 0;
-          }
-          .second-column-tools {
-            margin-left: 35px;
           }
         }
       }
